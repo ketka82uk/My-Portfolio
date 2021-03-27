@@ -1,3 +1,3 @@
 #Readme
 
-Portfolio site using Gatsby with React
+Portfolio site using Gatsby and fullPage.js
