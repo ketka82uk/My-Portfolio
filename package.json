@@ -16,8 +16,11 @@
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@fullpage/react-fullpage": "^0.1.19",
+    "@popperjs/core": "^2.9.1",
+    "bootstrap": "^4.6.0",
     "gatsby": "^3.1.1",
     "react": "^17.0.1",
+    "react-bootstrap": "^1.5.2",
     "react-dom": "^17.0.1"
   },
   "devDependencies": {

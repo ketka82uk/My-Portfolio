@@ -1,5 +1,11 @@
 import React from 'react';
 import ReactFullpage from "@fullpage/react-fullpage";
+import Header from "../components/header"
+import Contact from "./contact"
+
+// import '../styles/styles.css'
+import Button from 'react-bootstrap/Button'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const SEL = 'custom-section';
 const SECTION_SEL = `.${SEL}`;
@@ -21,13 +27,13 @@ class App extends React.Component {
       sectionsColor: [...originalColors],
       fullpages: [
         {
-          text: 'Section 1',
+          text: <Header headerText="Welcome"/>,
         },
         {
           text: 'Section 2',
         },
         {
-          text: 'Section 3',
+          text: <Contact />,
         }
       ],
     };
@@ -96,7 +102,7 @@ class App extends React.Component {
       >
         <ul class="actions">
           <li>
-            <button onClick={() => this.handleAddSection()}>Add Section</button>
+            <Button variant="primary" onClick={() => this.handleAddSection()}>Add Section</Button>
             <button onClick={() => this.handleRemoveSection()}>
               Remove Section
             </button>
@@ -123,7 +129,7 @@ class App extends React.Component {
           // fullpage options
           licenseKey={'4AEC80C9-18894042-B6E03B43-F648E604'} // Get one from https://alvarotrigo.com/fullPage/pricing/
           navigation
-          anchors={['firstPage', 'secondPage', 'thirdPage']}
+          anchors={['welcome', 'about', 'portfolio']}
           sectionSelector={SECTION_SEL}
           onLeave={this.onLeave.bind(this)}
           sectionsColor={this.state.sectionsColor}
