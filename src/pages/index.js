@@ -2,8 +2,10 @@ import React from 'react';
 import ReactFullpage from "@fullpage/react-fullpage";
 import Header from "../components/header"
 import Contact from "./contact"
+import About from "./about"
+import Portfolio from "./portfolio"
 
-// import '../styles/styles.css'
+import '../styles/styles.css'
 import Button from 'react-bootstrap/Button'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -27,13 +29,16 @@ class App extends React.Component {
       sectionsColor: [...originalColors],
       fullpages: [
         {
-          text: <Header headerText="Welcome"/>,
+          content: <Header headerText="Welcome"/>, id: 1,
         },
         {
-          text: 'Section 2',
+          content: <About />, id: 2,
         },
         {
-          text: <Contact />,
+          content: <Portfolio />, id: 3,
+        },
+        {
+          content: <Contact />, id: 4,
         }
       ],
     };
@@ -100,7 +105,7 @@ class App extends React.Component {
           zIndex: 100,
         }}
       >
-        <ul class="actions">
+        <ul className="actions">
           <li>
             <Button variant="primary" onClick={() => this.handleAddSection()}>Add Section</Button>
             <button onClick={() => this.handleRemoveSection()}>
@@ -129,16 +134,16 @@ class App extends React.Component {
           // fullpage options
           licenseKey={'4AEC80C9-18894042-B6E03B43-F648E604'} // Get one from https://alvarotrigo.com/fullPage/pricing/
           navigation
-          anchors={['welcome', 'about', 'portfolio']}
+          anchors={['welcome', 'about', 'portfolio', 'contact']}
           sectionSelector={SECTION_SEL}
           onLeave={this.onLeave.bind(this)}
           sectionsColor={this.state.sectionsColor}
 
           render={comp => (
             <ReactFullpage.Wrapper>
-              {fullpages.map(({ text }) => (
-                <div key={text} className={SEL}>
-                  <h1>{text}</h1>
+              {fullpages.map(({ content, id }) => (
+                <div key={id} className={SEL}>
+                  <div>{content}</div>
                 </div>
               ))}
             </ReactFullpage.Wrapper>

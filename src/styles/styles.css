@@ -1,26 +1,19 @@
-body{
-  font-family: arial;
-}
-.custom-section{
-  text-align: center;
-  font-size: 4em;
-  color: #fff;
+.row {
+  border: solid 1px black;
+  flex: 1
 }
 
-.actions{
-  list-style-type: none;
+.page-contents {
+  border: solid 5px red;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-.actions button{
-  padding: .93em 1.87em;
-  background: #35495e;
-  border-radius: 5px;
-  border: 0;
-  color: #fff;
-  margin: 7px;
-  font-size: 15px;
-  cursor: pointer;
+
+.column {
+  border: solid 1px blue;
 }
-.actions button:hover{
-  background: #fff;
-  color: #35495e;
+
+span {
+  background: white !important;
 }
