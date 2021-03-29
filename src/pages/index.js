@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactFullpage from "@fullpage/react-fullpage";
-import Header from "../components/header"
+import Welcome from "./welcome"
 import Contact from "./contact"
 import About from "./about"
 import Portfolio from "./portfolio"
 
-import '../styles/styles.css'
-import Button from 'react-bootstrap/Button'
+import '../styles/styles.scss'
+import { Navbar, Nav } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const SEL = 'custom-section';
@@ -29,7 +29,7 @@ class App extends React.Component {
       sectionsColor: [...originalColors],
       fullpages: [
         {
-          content: <Header headerText="Welcome"/>, id: 1,
+          content: <Welcome />, id: 1,
         },
         {
           content: <About />, id: 2,
@@ -50,41 +50,6 @@ class App extends React.Component {
     // with the event
   }
 
-  handleChangeColors() {
-    const newColors =
-      this.state.sectionsColor[0] === 'yellow'
-        ? [...originalColors]
-        : ['yellow', 'blue', 'white'];
-    this.setState({
-      sectionsColor: newColors,
-    });
-  }
-
-  handleAddSection() {
-    this.setState(state => {
-      const { fullpages } = state;
-      const { length } = fullpages;
-      fullpages.push({
-        text: `section ${length + 1}`,
-        id: Math.random(),
-      });
-
-      return {
-        fullpages: [...fullpages],
-      };
-    });
-  }
-
-  handleRemoveSection() {
-    this.setState(state => {
-      const { fullpages } = state;
-      const newPages = [...fullpages];
-      newPages.pop();
-
-      return { fullpages: newPages };
-    });
-  }
-
   moveSectionDown() {
     window.fullpage_api.moveSectionDown();
   }
@@ -102,23 +67,21 @@ class App extends React.Component {
         style={{
           position: 'fixed',
           top: 0,
+          right: 0,
           zIndex: 100,
         }}
       >
-        <ul className="actions">
-          <li>
-            <Button variant="primary" onClick={() => this.handleAddSection()}>Add Section</Button>
-            <button onClick={() => this.handleRemoveSection()}>
-              Remove Section
-            </button>
-            <button onClick={() => this.handleChangeColors()}>
-              Change background colors
-            </button>
-            <button onClick={() => this.moveSectionDown()}>
-              Move Section Down
-            </button>
-          </li>
-        </ul>
+        <Navbar expand="lg">
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto">
+              <Nav.Link href="#welcome">Home</Nav.Link>
+              <Nav.Link href="#about">About</Nav.Link>
+              <Nav.Link href="#portfolio">Portfolio</Nav.Link>
+              <Nav.Link href="#contact">Contact</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
       </div>
     );
 

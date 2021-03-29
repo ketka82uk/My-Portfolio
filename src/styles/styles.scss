@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cabin+Sketch&family=Chelsea+Market&family=Francois+One&family=Kosugi&family=Londrina+Solid&family=Lora&family=Passion+One&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+//#c77061
+
+$size: 50px;
+$speed: 3s;
+$peakopacity:0.7;
+
+body {
+  font-family: 'Lora', serif !important;
+}
+
+h1 {
+  font-family: 'Montserrat';
+  font-size: 150px !important;
+  text-shadow: 5px 5px 8px rgba(0,0,0,0.8) !important;
+}
+
+// ! WELCOME PAGE
+
+.welcome-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: whitesmoke;
+}
+
+.cathy {
+  color: #c77061;
+  margin-left: 20px;
+}
+
+.row {
+  border: solid 1px black;
+  flex: 1
+}
+
+.page-contents {
+  border: solid 5px red;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-contents-center {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.column {
+  border: solid 1px blue;
+}
+
+span {
+  background-color: white !important;
+}
+
+a {
+  color: white !important;
+}
+
+a:hover {
+  color: orangered !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("https://i.imgur.com/Vg3OFQ3.png") !important;
+  background-color: rgba(0,0,0,0) !important;
+}
+
+.arrows {
+  position: relative;
+    /**/
+  position: absolute;
+  top:85%;
+  left:50%;
+    /**/
+  width:$size;
+  height:$size;
+  transform:translate(-50%,-50%);
+    &:before {
+      content: '';
+      position: absolute;
+      width:100%;
+      height:100%;
+      border-left:$size/3 solid rgba(255,0,0,$peakopacity);
+      border-bottom:$size/3 solid rgba(255,0,0,$peakopacity);
+      transform:translate($size/3,$size*4/3)rotate(-45deg);
+      animation: arrows $speed linear infinite;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      width:100%;
+      height:100%;
+      border-left:$size/3 solid rgba(255,0,0,$peakopacity);
+      border-bottom:$size/3 solid rgba(255,0,0,$peakopacity);
+      transform:translate($size*2/3,0px)rotate(-45deg) ;
+      animation: arrows $speed linear infinite $speed/-2;
+    }
+}
+
+
+@keyframes arrows {
+  0% {
+      border-left:$size/3 solid rgba(255,0,0,0);
+      border-bottom:$size/3 solid rgba(255,0,0,0);
+      transform:translate($size/-6,$size*4/-6)rotate(-45deg) ;
+  }
+  10%, 90% {
+      border-left:$size/3 solid rgba(0,0,0,0);
+      border-bottom:$size/3 solid rgba(0,0,0,0);
+  }
+  50% {
+      border-left:$size/3 solid rgba(255,255,255,$peakopacity);
+      border-bottom:$size/3 solid rgba(255,255,255,$peakopacity);
+      transform:translate($size/-6,0px)rotate(-45deg) ;
+  }
+  100% {
+      border-left:$size/3 solid rgba(255,255,255,0);
+      border-bottom:$size/3 solid rgba(255,255,255,0);
+      transform:translate($size/-6,$size*4/6)rotate(-45deg) ;
+  }
+}

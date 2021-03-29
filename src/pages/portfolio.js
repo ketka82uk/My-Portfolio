@@ -1,10 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
-import Header from "../components/header"
-import PortfolioCard from "../components/card"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
-import Container from "react-bootstrap/Container"
 
 export default function Portfolio() {
   return (
