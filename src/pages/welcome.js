@@ -13,7 +13,7 @@ export default function Welcome() {
       <div><Header headerText="Hi, I'm"/></div>
       <div className="cathy"><Header headerText="Cathy"/></div>
     </div>
-    <a href="#about"><div className="arrows"></div></a>
+    <a href="#about" aria-label="move down"><div className="arrows"></div></a>
     </Container>
     </div>
   )

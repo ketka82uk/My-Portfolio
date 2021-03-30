@@ -1,43 +1,30 @@
-import React from "react"
-import Row from "react-bootstrap/Row"
-import Col from "react-bootstrap/Col"
+import React, { useState } from "react"
+import Container from "react-bootstrap/Container"
+import Button from "react-bootstrap/Button"
 
 export default function Portfolio() {
+
+  const [tvStatic, setTvStatic] = useState(true)
+  const [projectOne, setProjectOne] = useState(false)
+
+  const toggleProjectOne = () => {
+    setProjectOne(!projectOne)
+    setTvStatic(!tvStatic)
+    console.log('look here!', tvStatic)
+  }
+
   return (
-    <div className="page-contents">
-    
-      
-  {/* Stack the columns on mobile by making one full-width and the other half-width */}
-  <Row className="row">
-    <Col className="column" xs={3} md={3}>
-      xs=12 md=8
-    </Col>
-    <Col className="column" xs={3} md={3}>
-      xs=6 md=4
-    </Col>
-    <Col className="column" xs={3} md={3}>
-      xs=6 md=4
-    </Col>
-    <Col className="column" xs={3} md={3}>
-      xs=6 md=4
-    </Col>
-  </Row>
-  <Row className="row">
-  <Col className="column" xs={3} md={3}>
-      xs=12 md=8
-    </Col>
-    <Col xs={3} md={3}>
-      xs=6 md=4
-    </Col>
-    <Col xs={3} md={3}>
-      xs=6 md=4
-    </Col>
-    <Col xs={3} md={3}>
-      xs=6 md=4
-    </Col>
-  </Row>
-
-
+    <div className="page-contents-center">
+      <Container>
+        <div className="tv-container">
+          <div className="outer-tv-container">
+            {tvStatic && <div className="inner-tv-container"></div>}
+            {projectOne && <div className="project-one"></div>}
+            <div className="tv"></div>
+          </div>
+          <Button onClick={toggleProjectOne}>Channel 1</Button>
+        </div> 
+      </Container>
     </div>
   )
 }

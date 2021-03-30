@@ -1,11 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cabin+Sketch&family=Chelsea+Market&family=Francois+One&family=Kosugi&family=Londrina+Solid&family=Lora&family=Passion+One&family=Staatliches&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
-//#c77061
+//1200 - break
+//990 - break
+//770 - break
+
+// ! ANIMATIONS
 
 $size: 50px;
 $speed: 3s;
 $peakopacity:0.7;
+
+// ! COLOURS
+
+$selective-yellow: #f7b801ff;
+$indian-red: #e15554ff;
+$pacific-blue: #50b2c0ff;
+$dark-cornflower-blue: #2c497fff;
+
+// ! GENERAL TAGS
 
 body {
   font-family: 'Lora', serif !important;
@@ -27,7 +40,7 @@ h1 {
 }
 
 .cathy {
-  color: #c77061;
+  color: $indian-red;
   margin-left: 20px;
 }
 
@@ -102,6 +115,124 @@ a:hover {
       animation: arrows $speed linear infinite $speed/-2;
     }
 }
+
+// ! PORTFOLIO PAGE
+
+.tv-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 3px red;
+  height: 100vh
+}
+
+.outer-tv-container {
+  height: 500px;
+  width: 70%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 2px solid yellow;
+  z-index: 100;
+}
+
+.inner-tv-container {
+  border: solid 3px blue;
+  height: 400px;
+  width: 600px;
+  background-image: url('https://i.imgur.com/jwhS7om.gif');
+  position: absolute;
+  z-index: -1;
+  margin-top: 2%;
+  margin-left: 5%;
+}
+
+.project-one {
+  border: solid 3px blue;
+  height: 400px;
+  width: 600px;
+  background-image: url('https://images.unsplash.com/photo-1506102383123-c8ef1e872756?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHw%3D&w=1000&q=80');
+  position: absolute;
+  z-index: -1;
+  margin-top: 2%;
+  margin-left: 5%;
+}
+
+.tv {
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/TV.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 3px solid purple;
+  z-index: 100;
+}
+
+// ! MEDIA QUERIES
+
+@media screen and (max-width: 1200px) {
+  .inner-tv-container {
+    height: 350px;
+    width: 450px;
+    background-image: url('https://i.imgur.com/jwhS7om.gif');
+    position: absolute;
+    z-index: -1;
+    margin-top: 2%;
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .inner-tv-container {
+    border: solid 3px blue;
+    height: 250px;
+    width: 400px;
+    background-image: url('https://i.imgur.com/jwhS7om.gif');
+    position: absolute;
+    z-index: -1;
+    margin-top: 2%;
+    margin-left: 5%;
+  }
+  .outer-tv-container {
+    height: 300px;
+    width: 70%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 2px solid yellow;
+    z-index: 100;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .outer-tv-container {
+    height: 200px;
+    width: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 2px solid yellow;
+    z-index: 100;
+  }
+  .inner-tv-container {
+    height: 150px;
+    width: 220px;
+    background-image: url('https://i.imgur.com/jwhS7om.gif');
+    position: absolute;
+    z-index: -1;
+    margin-top: 10px;
+    margin-left: 25px;
+  }
+  .tv {
+    height: 200px;
+    width: 300px;
+    background-image: url("../images/TV.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 3px solid purple;
+    z-index: 100;
+  }
+}
+
+
+// ! KEYFRAMES
 
 
 @keyframes arrows {
