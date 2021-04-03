@@ -5,12 +5,23 @@
 //1200 - break
 //990 - break
 //770 - break
+//#7fbb98
 
 // ! ANIMATIONS
 
 $size: 50px;
 $speed: 3s;
 $peakopacity:0.7;
+
+// ! BUTTONS
+
+$height:65;
+$depth:6;
+$color: #C5B6B3;
+$text-color:darken($color,10%);
+$lighten-on-hover:7%;
+$button-speed:.06;
+$timing-function: ease-out;
 
 // ! COLOURS
 
@@ -27,8 +38,14 @@ body {
   
 h1 {
   font-family: 'Crimson Text', Georgia, serif;
-  font-size: 150px !important;
+  font-size: 150px;
   text-shadow: 5px 5px 8px rgba(0,0,0,0.8) !important;
+}
+
+h2 {
+  font-family: 'Crimson Text', Georgia, serif;
+  font-size: 100px !important;
+  text-shadow: 2.5px 2.5px 4px rgba(0,0,0,0.8) !important;
 }
 
 span {
@@ -41,7 +58,7 @@ a {
 }
 
 a:hover {
-  color: orangered !important;
+  color: #3a3a3a !important;
 }
 
 }
@@ -127,19 +144,55 @@ a:hover {
 
 // ! PORTFOLIO PAGE
 
-.tv-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.portfolio-container {
+  height: 100vh;
   border: solid 3px red;
-  height: 100vh
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-upper-section {
+  flex: 2;
+  display: flex;
+  align-items: flex-end;
+}
+
+.portfolio-header-section {
+  flex: 2;
+  display: flex;
+  align-items: flex-end;
+}
+
+.portfolio-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: $dark-cornflower-blue;
+  margin-top: 50px;
+}
+
+.portfolio-description-section {
+  flex: 3;
+  display: flex;
+  align-items: flex-end;
+}
+
+.portfolio-description {
+  flex: 2;
+}
+
+.tv-container {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  border: solid 3px red;
 }
 
 .outer-tv-container {
   height: 500px;
   width: 70%;
-  background-size: contain;
-  background-repeat: no-repeat;
   border: 2px solid yellow;
   z-index: 100;
 }
@@ -147,36 +200,124 @@ a:hover {
 .inner-tv-container {
   border: solid 3px blue;
   height: 400px;
-  width: 600px;
+  width: 590px;
   background-image: url('https://i.imgur.com/jwhS7om.gif');
   position: absolute;
   z-index: -1;
   margin-top: 2%;
-  margin-left: 5%;
+  margin-left: 55px;
 }
 
 .project-one {
   border: solid 3px blue;
   height: 400px;
-  width: 600px;
-  background-image: url('https://images.unsplash.com/photo-1506102383123-c8ef1e872756?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHw%3D&w=1000&q=80');
+  width: 590px;
   position: absolute;
   z-index: -1;
   margin-top: 2%;
-  margin-left: 5%;
+  margin-left: 55px;
 }
 
 .tv {
-  height: 100%;
-  width: 100%;
-  background-image: url("../images/TV.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  position: absolute;
   border: 3px solid purple;
   z-index: 100;
 }
 
-// ! MEDIA QUERIES
+.button-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 3px solid orange;
+  z-index: 200;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-container {
+  height: 100%;
+  width: 162px;
+  border: 3px solid blue;
+  padding-top: 5%;
+  padding-left: 10px;
+}
+
+.channel-button {
+  margin-bottom: 2px;
+  background-color: brown !important;
+  font-family: 'Montserrat';
+  border: none !important;
+}
+
+// ! TV BUTTONS (Alex Zaworski - https://codepen.io/alexzaworski/pen/LEWRxm)
+
+.channel-button {
+  cursor:pointer;
+  margin-left:5px;
+  margin-bottom:15px;
+  text-shadow:0 -2px 0 darken($color,20%),0 1px 1px lighten($color,20%) ;
+  box-sizing:border-box;
+  font-size:2em;
+  font-family: Helvetica, Arial, Sans-Serif;
+  text-decoration:none;
+  font-weight:bold;
+  color:$text-color !important;
+  &:visited {
+    color:$text-color;
+  }
+  height:$height+px;
+  line-height:$height+px;
+  padding: 0 (($height/2)+px);
+  display:inline-block;
+  width:auto;
+  background: linear-gradient(to bottom,
+    saturate(lighten($color,15%),35%) 0%,
+    saturate(lighten($color,12%),15%) 26%,
+    $color 100%);
+  border-radius:5px;
+  border-top:1px solid lighten($color,22%);
+  border-bottom:1px solid lighten($color,20%);
+ top:0;
+  transition:all ($button-speed + s) $timing-function;
+  position:relative;
+}
+.channel-button:hover {
+  background: linear-gradient(to bottom,
+    lighten(saturate(lighten($color,15%),35%),$lighten-on-hover) 0%,
+    lighten(saturate(lighten($color,12%),15%),$lighten-on-hover) 26%,
+    lighten($color,$lighten-on-hover) 100%);
+}
+.channel-button:active {
+  top:$depth+px;
+       text-shadow:0 -2px 0 darken($color,0%),0 1px 1px lighten($color,20%), 0 0 4px white ;
+  color:lighten($color,45%);
+  &:before {
+    top:0;
+    box-shadow: 0 3px 3px rgba(0,0,0,.7),0 3px 9px rgba(0,0,0,.2);
+
+  }
+}
+.channel-button:before {
+  display:inline-block;
+  content:'';
+  position:absolute;
+  left:0;
+  right:0;
+  z-index:-1;
+  top:($depth)+px;
+  border-radius:5px;
+  height:($height)+px;
+  background: linear-gradient(to top,
+    saturate(darken($color,40%),15%) 0%,
+    saturate(darken($color,25%),10%) $depth+px);
+  transition:all (($button-speed*1.3) + s) $timing-function;
+  box-shadow:
+    0 1px 0 2px rgba(0,0,0,.3),
+    0 5px ($depth*.4+px) rgba(0,0,0,.5),
+    0 ($depth*1.8+px) 9px rgba(0,0,0,.2);
+    
+  
+}
 
 @media screen and (max-width: 1200px) {
   .inner-tv-container {
@@ -188,58 +329,13 @@ a:hover {
     margin-top: 2%;
     margin-left: 5%;
   }
-}
-
-@media screen and (max-width: 992px) {
-  .inner-tv-container {
-    border: solid 3px blue;
-    height: 250px;
-    width: 400px;
-    background-image: url('https://i.imgur.com/jwhS7om.gif');
-    position: absolute;
-    z-index: -1;
-    margin-top: 2%;
-    margin-left: 5%;
+  h1 {
+    font-size: 100px !important;
   }
-  .outer-tv-container {
-    height: 300px;
-    width: 70%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    border: 2px solid yellow;
-    z-index: 100;
+  h2 {
+    font-family: 'Montserrat' !important;
   }
 }
-
-@media screen and (max-width: 767px) {
-  .outer-tv-container {
-    height: 200px;
-    width: 300px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    border: 2px solid yellow;
-    z-index: 100;
-  }
-  .inner-tv-container {
-    height: 150px;
-    width: 220px;
-    background-image: url('https://i.imgur.com/jwhS7om.gif');
-    position: absolute;
-    z-index: -1;
-    margin-top: 10px;
-    margin-left: 25px;
-  }
-  .tv {
-    height: 200px;
-    width: 300px;
-    background-image: url("../images/TV.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    border: 3px solid purple;
-    z-index: 100;
-  }
-}
-
 
 // ! KEYFRAMES
 
