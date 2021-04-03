@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cabin+Sketch&family=Chelsea+Market&family=Francois+One&family=Kosugi&family=Londrina+Solid&family=Lora&family=Passion+One&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo&family=Crimson+Text&family=Libre+Baskerville&family=Merriweather&family=Neuton&family=Playfair+Display&display=swap');
 
 //1200 - break
 //990 - break
@@ -21,28 +22,31 @@ $dark-cornflower-blue: #2c497fff;
 // ! GENERAL TAGS
 
 body {
-  font-family: 'Lora', serif !important;
-}
-
+  font-family: 'Crimson Text', serif !important;
+  font-size: 20px !important;
+  
 h1 {
-  font-family: 'Montserrat';
+  font-family: 'Crimson Text', Georgia, serif;
   font-size: 150px !important;
   text-shadow: 5px 5px 8px rgba(0,0,0,0.8) !important;
 }
 
-// ! WELCOME PAGE
-
-.welcome-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  color: whitesmoke;
+span {
+  background-color: white !important;
 }
 
-.cathy {
-  color: $indian-red;
-  margin-left: 20px;
+a {
+  color: white !important;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.8) !important;
 }
+
+a:hover {
+  color: orangered !important;
+}
+
+}
+
+// ! GENERAL FORMATTING
 
 .row {
   border: solid 1px black;
@@ -67,21 +71,26 @@ h1 {
   border: solid 1px blue;
 }
 
-span {
-  background-color: white !important;
-}
 
-a {
-  color: white !important;
-}
-
-a:hover {
-  color: orangered !important;
-}
+// ! NAVBAR
 
 .navbar-toggler-icon {
   background-image: url("https://i.imgur.com/Vg3OFQ3.png") !important;
   background-color: rgba(0,0,0,0) !important;
+}
+
+// ! WELCOME PAGE
+
+.welcome-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: whitesmoke;
+}
+
+.cathy {
+  color: $indian-red;
+  margin-left: 20px;
 }
 
 .arrows {

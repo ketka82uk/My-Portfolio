@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import Container from "react-bootstrap/Container"
 import Button from "react-bootstrap/Button"
+import background from "../images/portfolio-background.jpg"
+
 
 export default function Portfolio() {
 
@@ -14,7 +16,7 @@ export default function Portfolio() {
   }
 
   return (
-    <div className="page-contents-center">
+    <div className="page-contents-center" style={{ backgroundImage: `url(${background})`, backgroundSize: '100% 100%' }}>
       <Container>
         <div className="tv-container">
           <div className="outer-tv-container">
