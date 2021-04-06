@@ -8,18 +8,5 @@ module.exports = {
   /* Your site config here */
   plugins: [`gatsby-plugin-sass`], 
   plugins: [`gatsby-plugin-react-helmet`],
-  plugins: [
-    {
-      resolve: "gatsby-plugin-antd",
-      options: {
-        style: true,
-      },
-    },
-    {
-      resolve: "gatsby-plugin-less",
-      options: {
-        javascriptEnabled: true,
-      },
-    }
-  ]
+  plugins: [`gatsby-plugin-sass`]
 }
