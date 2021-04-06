@@ -20,8 +20,8 @@ export default function Contact() {
         <Col md={0} lg={6}>
           <div className="contact-left-section">
           <h2 className="h2-contact">{"{ let's talk }"}</h2>
-          <a className="a-contact" href="https://www.linkedin.com/in/cathyjthomas/">/in/cathyjthomas <SiLinkedin /></a>
-          <a className="a-contact" href="https://github.com/ketka82uk">/ketka82uk <SiGithub /></a>
+          <a className="a-contact" href="https://www.linkedin.com/in/cathyjthomas/" target="_blank" rel="noreferrer">/in/cathyjthomas <SiLinkedin /></a>
+          <a className="a-contact" href="https://github.com/ketka82uk" target="_blank" rel="noreferrer">/ketka82uk <SiGithub /></a>
           <a className="a-contact" href="mailto:cathyjthomas.dev@gmail.com">cathyjthomas.dev@gmail.com <AiOutlineMail /></a>
           </div>
         </Col>
@@ -34,6 +34,7 @@ export default function Contact() {
        <div className="contact-lower-section">
        <div>Cathy J Thomas | 2021</div>
        <div>Made with <SiGatsby /> Gatsby and <SiBootstrap /> Bootstrap</div>
+       <div>Assets from <a href="https://www.rawpixel.com/" target="_blank" rel="norefferer">rawpixel</a></div>
        </div>
        
     </div>
