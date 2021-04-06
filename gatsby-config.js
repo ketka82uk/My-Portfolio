@@ -8,5 +8,7 @@ module.exports = {
   /* Your site config here */
   plugins: [`gatsby-plugin-sass`], 
   plugins: [`gatsby-plugin-react-helmet`],
-  plugins: [`gatsby-plugin-sass`]
+  plugins: [`gatsby-plugin-sass`],
+  pathPrefix: "/My-Portfolio/",
+  
 }
