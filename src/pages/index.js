@@ -74,7 +74,7 @@ class App extends React.Component {
         <Navbar expand="lg">
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
+            <Nav className="mr-auto navbar-link">
               <Nav.Link href="#welcome">HOME</Nav.Link>
               <Nav.Link href="#about">ABOUT</Nav.Link>
               <Nav.Link href="#portfolio">PORTFOLIO</Nav.Link>

@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cardo&family=Crimson+Text&family=Libre+Baskerville&family=Merriweather&family=Neuton&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap');
 
 //1200 - break
 //990 - break
 //770 - break
 //#7fbb98
+
+//lg-1080
+//md-892
 
 // ! ANIMATIONS
 
@@ -35,6 +40,12 @@ $dark-cornflower-blue: #2c497fff;
 body {
   font-family: 'Crimson Text', serif !important;
   font-size: 20px !important;
+
+p {
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 0px;
+}
   
 h1 {
   font-family: 'Crimson Text', Georgia, serif;
@@ -44,34 +55,77 @@ h1 {
 
 h2 {
   font-family: 'Crimson Text', Georgia, serif;
-  font-size: 100px !important;
+  font-size: 100px ;
   text-shadow: 2.5px 2.5px 4px rgba(0,0,0,0.8) !important;
 }
+
+h3 {
+  font-family: 'Crimson Text', sans-serif;
+  font-weight: 600 !important;
+  font-size: 40px;
+} 
 
 span {
   background-color: white !important;
 }
 
 a {
-  color: white !important;
-  text-shadow: 2px 2px 3px rgba(0,0,0,0.8) !important;
+  color: whitesmoke !important;
 }
 
 a:hover {
   color: #3a3a3a !important;
 }
 
+
+input {
+  border-top: none !important;
+  border-right: none !important;
+  border-left: none !important;
+  border-bottom: 5px solid $indian-red !important;
+  border-radius: 0px !important;
+  background: none !important;
+  margin: 10px;
+  font-family: 'Crimson Text', serif;
+  font-size: 40px !important;
+}
+
+input:focus {
+  box-shadow: none !important;
+}
+
+input:active {
+  border: none !important;
+  background: none !important;
+}
+
+textarea {
+  border-top: none !important;
+  border-right: none !important;
+  border-left: none !important;
+  border-bottom: 5px solid $indian-red !important;
+  border-radius: 0px !important;
+  background: rgba(250, 250, 250, 0.5) !important;
+  margin: 10px;
+  font-family: 'Crimson Text', serif;
+  font-size: 24px !important;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #dd7b7b !important;
+  opacity: 0.5 !important; /* Firefox */
+}
+
+button {
+  background-color: $indian-red !important;
+  border: none !important
+}
+
 }
 
 // ! GENERAL FORMATTING
 
-.row {
-  border: solid 1px black;
-  flex: 1
-}
-
 .page-contents {
-  border: solid 5px red;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -84,17 +138,17 @@ a:hover {
   justify-content: center;
 }
 
-.column {
-  border: solid 1px blue;
-}
-
-
 // ! NAVBAR
 
 .navbar-toggler-icon {
   background-image: url("https://i.imgur.com/Vg3OFQ3.png") !important;
   background-color: rgba(0,0,0,0) !important;
 }
+
+.navbar-link {
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.8) !important;
+}
+
 
 // ! WELCOME PAGE
 
@@ -142,25 +196,31 @@ a:hover {
     }
 }
 
+// ! ABOUT PAGE
+
+
+
 // ! PORTFOLIO PAGE
 
-.portfolio-container {
-  height: 100vh;
-  border: solid 3px red;
+.portfolio-upper-section {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: solid black 3px;
 }
 
-.portfolio-upper-section {
-  flex: 2;
+.portfolio-lower-section {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  margin-bottom: 50px;
 }
 
 .portfolio-header-section {
-  flex: 2;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: flex-end;
+  border: 1px solid red
 }
 
 .portfolio-header {
@@ -168,59 +228,91 @@ a:hover {
   justify-content: flex-start;
   align-items: center;
   color: $dark-cornflower-blue;
-  margin-top: 50px;
+  border: 1px solid black
+}
+
+.curly-brace {
+  display: flex;
+  align-items: flex-start;
+  font-size: 300px;
+  line-height: .9em;
+  color: $dark-cornflower-blue;
+  text-shadow: 5px 5px 8px rgba(0,0,0,0.8) !important;
+  font-family: 'Kiwi Maru', Georgia, serif;
+  border: 1px solid black
 }
 
 .portfolio-description-section {
-  flex: 3;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  border: 1px solid red
 }
 
 .portfolio-description {
-  flex: 2;
+  border: 1px solid green
 }
 
-.tv-container {
-  flex: 4;
+.project-description {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid blue
+}
+
+.description-contents {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-  border: solid 3px red;
+  justify-content: center;
+  color: #f8a9a9;
+  font-family: 'Raleway', sans-serif;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid orange
+}
+
+.project-links {
+  font-family: 'Raleway', sans-serif;
+}
+
+.tv-section {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red
 }
 
 .outer-tv-container {
+  display: flex;
+  justify-content: center;
   height: 500px;
-  width: 70%;
-  border: 2px solid yellow;
+  width: 50%;
   z-index: 100;
+  border: 1px solid orange
 }
 
 .inner-tv-container {
-  border: solid 3px blue;
   height: 400px;
-  width: 590px;
+  width: 620px;
   background-image: url('https://i.imgur.com/jwhS7om.gif');
   position: absolute;
   z-index: -1;
-  margin-top: 2%;
-  margin-left: 55px;
+  margin-top: 1%;
+  margin-left: 30px;
 }
 
 .project-one {
-  border: solid 3px blue;
   height: 400px;
-  width: 590px;
+  width: 620px;
   position: absolute;
   z-index: -1;
-  margin-top: 2%;
-  margin-left: 55px;
+  margin-top: 1%;
+  margin-left: 30px;
+  margin-right: 50px;
 }
 
 .tv {
   position: absolute;
-  border: 3px solid purple;
   z-index: 100;
 }
 
@@ -228,7 +320,6 @@ a:hover {
   position: absolute;
   height: 100%;
   width: 100%;
-  border: 3px solid orange;
   z-index: 200;
   display: flex;
   justify-content: flex-end;
@@ -237,17 +328,10 @@ a:hover {
 .button-container {
   height: 100%;
   width: 162px;
-  border: 3px solid blue;
   padding-top: 5%;
   padding-left: 10px;
 }
 
-.channel-button {
-  margin-bottom: 2px;
-  background-color: brown !important;
-  font-family: 'Montserrat';
-  border: none !important;
-}
 
 // ! TV BUTTONS (Alex Zaworski - https://codepen.io/alexzaworski/pen/LEWRxm)
 
@@ -255,10 +339,11 @@ a:hover {
   cursor:pointer;
   margin-left:5px;
   margin-bottom:15px;
-  text-shadow:0 -2px 0 darken($color,20%),0 1px 1px lighten($color,20%) ;
+  text-shadow:0 -1px 0 darken($color,20%),0 1px 1px lighten($color,20%) ;
   box-sizing:border-box;
   font-size:2em;
-  font-family: Helvetica, Arial, Sans-Serif;
+  font-family: 'Raleway', sans-serif;
+  border: none !important;
   text-decoration:none;
   font-weight:bold;
   color:$text-color !important;
@@ -319,21 +404,28 @@ a:hover {
   
 }
 
-@media screen and (max-width: 1200px) {
-  .inner-tv-container {
-    height: 350px;
-    width: 450px;
-    background-image: url('https://i.imgur.com/jwhS7om.gif');
-    position: absolute;
-    z-index: -1;
-    margin-top: 2%;
-    margin-left: 5%;
-  }
+// ! CONTACT
+
+#submit-button {
+  font-size: 30px !important;
+  margin: 10px;
+  border-radius: 0px !important;
+}
+
+
+
+@media (max-width: 1199.98px) {
   h1 {
     font-size: 100px !important;
   }
   h2 {
-    font-family: 'Montserrat' !important;
+    font-size: 80px !important;
+  }
+  h3 {
+    font-size: 30px !important;
+  }
+  p {
+    font-size: 18px !important;
   }
 }
 
