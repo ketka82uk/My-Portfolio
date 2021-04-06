@@ -1,0 +1,141 @@
+@media (max-width: 767.98px) {
+
+  // ! COLOURS
+
+  $selective-yellow: #f7b801ff;
+  $indian-red: #e15554ff;
+  $pacific-blue: #50b2c0ff;
+  $dark-cornflower-blue: #2c497fff;
+
+  // * WELCOME
+
+  .welcome-background {
+    background-image: url('../images/home-background-sml.jpg')
+  }
+
+  h1.cathy {
+    font-size: 90px;
+    margin-right: 20px;
+  }
+  h2.h2-welcome {
+    font-size: 60px;
+    margin-right: 30px;
+  }
+
+  // * ABOUT
+
+  .about-background {
+    background-image: url('../images/about-background-sml.jpg')
+  }
+
+  img.me {
+    height: 200px;
+  }
+
+  h2.h2-about {
+    font-size: 50px;
+  }
+
+  p.p-about {
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 10px;
+    color: #3a3a3a
+  }
+
+  .about-right-section {
+    margin-top: 0px;
+    justify-content: flex-start;
+  }
+
+  .about-container {
+    padding-right: 0px;
+  }
+
+  // * PORTFOLIO
+
+  .portfolio-background {
+    background-image: url('../images/portfolio-background-sml.jpg')
+  }
+
+  .portfolio-upper-section {
+    margin-top: 50px;
+  }
+
+  h2.h2-portfolio {
+    font-size: 60px;
+    color: whitesmoke;
+  }
+
+  .outer-tv-container {
+    height: 200px;
+    width: 100%;
+  }
+
+  .inner-tv-container {
+    height: 200px;
+    width: 300px;
+    margin-right: 20px;
+  }
+
+  .project-one {
+    height: 180px;
+    width: 300px;
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+
+  img.img-tv {
+    height: 220px;
+  }
+
+  .curly-brace {
+    display: none;
+  }
+
+  .tv-section {
+    margin-top: 0px;
+  }
+
+  .button-container {
+    display: none
+  }
+
+  .mobile-buttons {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+
+  }
+
+  .sml-channel-button {
+    background-color: $dark-cornflower-blue !important;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px !important;
+  }
+
+  .description-contents {
+    color: #3a3a3a;
+    background-color: rgba(255,255,255,0.4);
+  }
+
+  .project-links {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  // * CONTACT
+
+  h2.h2-contact {
+    font-size: 60px;
+  }
+
+  a.a-contact {
+    font-size: 22px;
+  }
+
+
+  
+
+
+}

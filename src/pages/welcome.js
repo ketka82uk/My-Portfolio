@@ -1,21 +1,29 @@
 import React from "react"
 import FadeIn from 'react-fade-in'
-import Header from "../components/header"
-import background from "../images/home-background.jpg"
 
 import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 export default function Welcome() {
 
 
-  return ( <div className="page-contents-center" style={{ backgroundImage: `url(${background})`, backgroundSize: '100% 100%' }}>
+  return (<div className="welcome-background">
     <Container>
-    <div className="welcome-header">
-      <div><Header headerText="Hi, I'm"/></div>
-      <FadeIn delay='1000'><div className="cathy"><Header headerText="Cathy"/></div></FadeIn>
-    </div>
-    <a href="#about" aria-label="move down"><div className="arrows"></div></a>
+      <Row>
+        <Col md={0} lg={4}></Col>
+        <Col md={12} lg={6}>
+          <FadeIn delay='500' transitionDuration="2000">
+            <div className="welcome-header">
+              <h2 className="h2-welcome">Hi, I'm</h2>
+              <h1 className="cathy">{`{ Cathy }`}</h1>
+            </div>
+          </FadeIn>
+        </Col>
+        <Col md={0} lg={2}></Col>
+      </Row>
+      <a href="#about" aria-label="move down"><div className="arrows"></div></a>
     </Container>
-    </div>
+  </div>
   )
 }

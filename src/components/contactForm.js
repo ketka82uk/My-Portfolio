@@ -13,15 +13,15 @@ export default function ContactUs() {
   const [message, setMessage] = useState('')
 
   const handleChange = (event) => {
-    event.target.name=="first_name" 
+    event.target.name === "first_name" 
     ? setFirstName(event.target.value)
-    : event.target.name=="last_name" 
+    : event.target.name === "last_name" 
     ? setLastName(event.target.value)
-    : event.target.name=="company" 
+    : event.target.name === "company" 
     ? setCompany(event.target.value)
-    : event.target.name=="user_email"
+    : event.target.name === "user_email"
     ? setEmail(event.target.value)
-    : event.target.name=="message"
+    : event.target.name === "message"
     ? setMessage(event.target.value)
     : console.log("error")
   };
@@ -110,45 +110,7 @@ export default function ContactUs() {
       </Button>
       </Form.Row>
     </Form>
-    
-    {/* <form className="contact-form" onSubmit={sendEmail}>
-      <input 
-      class Name="input" 
-      type="hidden" 
-      name="contact_number"/>
-      <label>First Name</label>
-      <input 
-      type="text" 
-      name="first_name" 
-      value={firstName}
-      onChange={(e) => handleChange(e)} />
-      <label>Last Name</label>
-      <input 
-      type="text" 
-      name="last_name" 
-      value={lastName}
-      onChange={(e) => handleChange(e)} />
-      <label>Company</label>
-      <input 
-      type="text" 
-      name="company" 
-      value={company}
-      onChange={(e) => handleChange(e)} />
-      <label>Email</label>
-      <input 
-      type="email" 
-      name="user_email" 
-      value={email}
-      onChange={(e) => handleChange(e)} />
-      <label>Message</label>
-      <textarea 
-      name="message" 
-      value={message}
-      onChange={(e) => handleChange(e)} />
-      <input 
-      type="submit" 
-      value="Send" />
-    </form> */}
+  
     {sendStatus && <p>Form submitted - thanks for getting in touch!</p>}
     </div>
   );

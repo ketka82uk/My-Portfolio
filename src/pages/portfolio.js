@@ -9,7 +9,6 @@ import ProjectOne from "./projectOne"
 import ProjectTwo from "./projectTwo"
 import ProjectThree from "./projectThree"
 import ProjectFour from "./projectFour"
-import background from "../images/portfolio-background.jpg"
 import tic_tac_dino from "../images/Tic-Tac-Dino-high.gif"
 import etc_news from "../images/ETC.gif"
 import loose_end from "../images/loose-end.gif"
@@ -67,11 +66,10 @@ export default function Portfolio() {
   }
 
   return (
-    <div className="page-contents-center" style={{ backgroundImage: `url(${background})`, backgroundSize: '100% 100%' }}>
-    
-<Container fluid>
+    <div className="portfolio-background">
+      <Container fluid>
         <Row className="portfolio-upper-section">
-          
+
           <Col>
             <div className="tv-section">
               <div className="outer-tv-container">
@@ -89,7 +87,7 @@ export default function Portfolio() {
                       <Button className="channel-button" onClick={toggleProjectFour}>Project 4</Button>
                     </div>
                   </div>
-                  <img src={tv} alt="retro TV" height="480px"></img>
+                  <img src={tv} alt="retro TV" height="480px" className="img-tv"></img>
                 </div>
               </div>
             </div>
@@ -97,27 +95,33 @@ export default function Portfolio() {
         </Row>
 
         <Row className="portfolio-lower-section">
-        <Col lg={0} xl={1}></Col>
+          <Col lg={0} xl={1}></Col>
           <Col lg={0} xl={5}>
+            <div className="mobile-buttons">
+              <Button className="sml-channel-button" onClick={toggleProjectOne}>Project 1</Button>
+              <Button className="sml-channel-button" onClick={toggleProjectTwo}>Project 2</Button>
+              <Button className="sml-channel-button" onClick={toggleProjectThree}>Project 3</Button>
+              <Button className="sml-channel-button" onClick={toggleProjectFour}>Project 4</Button>
+            </div>
             <div className="portfolio-header-section">
-              <div className="portfolio-header"><h2>{`myWork()`}</h2></div>
+              <div className="portfolio-header"><h2 className="h2-portfolio">{`myWork()`}</h2></div>
             </div>
           </Col>
           <Col lg={12} xl={5}>
             <div className="portfolio-description-section">
-              {tvStatic && <div className="portfolio-description"><FadeIn delay="500"><MyProjects /></FadeIn></div>}
-              {projectOne && <div className="portfolio-description"><FadeIn delay="500"><ProjectOne /></FadeIn></div>}
-              {projectTwo && <div className="portfolio-description"><FadeIn delay="500"><ProjectTwo /></FadeIn></div>}
-              {projectThree && <div className="portfolio-description"><FadeIn delay="500"><ProjectThree /></FadeIn></div>}
-              {projectFour && <div className="portfolio-description"><FadeIn delay="500"><ProjectFour /></FadeIn></div>}
+              {tvStatic && <div className="portfolio-description"><FadeIn delay="100" transitionDuration="1000"><MyProjects /></FadeIn></div>}
+              {projectOne && <div className="portfolio-description"><FadeIn delay="100" transitionDuration="1000"><ProjectOne /></FadeIn></div>}
+              {projectTwo && <div className="portfolio-description"><FadeIn delay="100" transitionDuration="1000"><ProjectTwo /></FadeIn></div>}
+              {projectThree && <div className="portfolio-description"><FadeIn delay="100" transitionDuration="1000"><ProjectThree /></FadeIn></div>}
+              {projectFour && <div className="portfolio-description"><FadeIn delay="100" transitionDuration="1000"><ProjectFour /></FadeIn></div>}
             </div>
           </Col>
           <Col lg={0} xl={1}></Col>
         </Row>
 
-        </Container>
+      </Container>
 
-     
+
     </div>
   )
 }

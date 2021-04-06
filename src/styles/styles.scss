@@ -12,6 +12,25 @@
 //lg-1080
 //md-892
 
+// <576
+// sm >576
+// md  >768
+// lg >992
+// xl >1200
+// xxl >1400
+
+// ! BREAKPOINTS
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+
 // ! ANIMATIONS
 
 $size: 50px;
@@ -37,12 +56,13 @@ $dark-cornflower-blue: #2c497fff;
 
 // ! GENERAL TAGS
 
+
 body {
   font-family: 'Crimson Text', serif !important;
-  font-size: 20px !important;
+  font-size: 24px !important;
 
 p {
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Raleway', sans-serif;
   margin-bottom: 0px;
 }
@@ -82,12 +102,12 @@ input {
   border-top: none !important;
   border-right: none !important;
   border-left: none !important;
-  border-bottom: 5px solid $indian-red !important;
+  border-bottom: 3px solid $indian-red !important;
   border-radius: 0px !important;
   background: none !important;
   margin: 10px;
   font-family: 'Crimson Text', serif;
-  font-size: 40px !important;
+  font-size: 24px !important;
 }
 
 input:focus {
@@ -117,7 +137,6 @@ textarea {
 }
 
 button {
-  background-color: $indian-red !important;
   border: none !important
 }
 
@@ -140,10 +159,10 @@ button {
 
 // ! NAVBAR
 
-.navbar-toggler-icon {
-  background-image: url("https://i.imgur.com/Vg3OFQ3.png") !important;
-  background-color: rgba(0,0,0,0) !important;
-}
+// .navbar-toggler-icon {
+//   background-image: url("https://i.imgur.com/Vg3OFQ3.png") !important;
+//   background-color: rgba(0,0,0,0) !important;
+// }
 
 .navbar-link {
   text-shadow: 2px 2px 3px rgba(0,0,0,0.8) !important;
@@ -152,16 +171,34 @@ button {
 
 // ! WELCOME PAGE
 
+.welcome-background {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url('../images/home-background.jpg');
+  background-size: 100% 100%
+}
+
+h1.welcome {
+  font-size: 150px;
+}
+
+h2.h2-welcome {
+  font-size: 100px;
+}
+
 .welcome-header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: flex-end;
   color: whitesmoke;
 }
 
 .cathy {
   color: $indian-red;
-  margin-left: 20px;
+  line-height: .7em;
 }
 
 .arrows {
@@ -198,15 +235,79 @@ button {
 
 // ! ABOUT PAGE
 
+.about-background {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-image: url('../images/about-background.jpg');
+  background-size: 100% 100%
+}
+
+.about-right-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  border: solid red 1px;
+  margin-top: 50px;
+}
+
+.about-container {
+  border: solid black 3px;
+  padding-right: 80px;
+}
+
+h2.h2-about {
+  color: $pacific-blue;
+  font-size: 80px
+}
+
+p.p-about {
+  color: whitesmoke;
+}
+
+.about-buttons-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid orange;
+}
+
+button.about-button {
+  height: 50px;
+  font-family: 'Raleway', sans-serif;
+  margin-left: 10px;
+  border: 3px solid $pacific-blue !important;
+  border-radius: 0px !important;
+  background: none;
+  color: $pacific-blue;
+  font-size: 22px;
+}
+
+:hover.about-button {
+  color: whitesmoke;
+  border: solid 3px whitesmoke !important;
+  background: none !important;
+}
 
 
 // ! PORTFOLIO PAGE
+
+.portfolio-background {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url('../images/portfolio-background.jpg');
+  background-size: 100% 100%
+}
 
 .portfolio-upper-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: solid black 3px;
+
 }
 
 .portfolio-lower-section {
@@ -220,7 +321,6 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  border: 1px solid red
 }
 
 .portfolio-header {
@@ -228,49 +328,44 @@ button {
   justify-content: flex-start;
   align-items: center;
   color: $dark-cornflower-blue;
-  border: 1px solid black
 }
 
 .curly-brace {
   display: flex;
   align-items: flex-start;
-  font-size: 300px;
+  font-size: 250px;
   line-height: .9em;
   color: $dark-cornflower-blue;
   text-shadow: 5px 5px 8px rgba(0,0,0,0.8) !important;
   font-family: 'Kiwi Maru', Georgia, serif;
-  border: 1px solid black
 }
 
 .portfolio-description-section {
   display: flex;
   align-items: center;
-  border: 1px solid red
-}
-
-.portfolio-description {
-  border: 1px solid green
 }
 
 .project-description {
   display: flex;
   flex-direction: row;
-  border: 1px solid blue
 }
 
 .description-contents {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #f8a9a9;
+  color: whitesmoke;
   font-family: 'Raleway', sans-serif;
   padding-left: 10px;
   padding-right: 10px;
-  border: 1px solid orange
 }
 
 .project-links {
-  font-family: 'Raleway', sans-serif;
+  color: $dark-cornflower-blue !important;
+}
+
+.h3-portfolio {
+  color: $dark-cornflower-blue
 }
 
 .tv-section {
@@ -279,7 +374,6 @@ button {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: 1px solid red
 }
 
 .outer-tv-container {
@@ -288,7 +382,6 @@ button {
   height: 500px;
   width: 50%;
   z-index: 100;
-  border: 1px solid orange
 }
 
 .inner-tv-container {
@@ -309,6 +402,7 @@ button {
   margin-top: 1%;
   margin-left: 30px;
   margin-right: 50px;
+  background-size: contain;
 }
 
 .tv {
@@ -330,6 +424,10 @@ button {
   width: 162px;
   padding-top: 5%;
   padding-left: 10px;
+}
+
+.mobile-buttons {
+  display: none;
 }
 
 
@@ -406,28 +504,56 @@ button {
 
 // ! CONTACT
 
+.contact-background {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url('../images/contact-background.jpg');
+  background-size: 100% 100%
+}
+
 #submit-button {
-  font-size: 30px !important;
+  font-size: 24px !important;
   margin: 10px;
   border-radius: 0px !important;
+  background-color: $indian-red !important;
+}
+
+.contact-upper-section {
+  flex: 12;
+  margin-top: 80px;
+}
+
+.contact-lower-section {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  color: gray;
+}
+
+.contact-left-section {
+  border: 3px solid orange;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+h2.h2-contact {
+  color: $indian-red;
+  margin-bottom: 20px;
+}
+
+a.a-contact {
+  color: #3a3a3a !important;
+  font-size: 30px;
 }
 
 
-
-@media (max-width: 1199.98px) {
-  h1 {
-    font-size: 100px !important;
-  }
-  h2 {
-    font-size: 80px !important;
-  }
-  h3 {
-    font-size: 30px !important;
-  }
-  p {
-    font-size: 18px !important;
-  }
-}
 
 // ! KEYFRAMES
 
