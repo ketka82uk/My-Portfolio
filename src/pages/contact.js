@@ -1,8 +1,14 @@
 import React from "react"
-import ContactUs from "../components/contactForm"
+
+// * Bootstrap
 import Container from "react-bootstrap/Container"
 import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
+
+// * Components
+import ContactUs from "../components/contactForm"
+
+// * Images
 import { SiGatsby, SiBootstrap, SiLinkedin, SiGithub } from "react-icons/si"
 import { AiOutlineMail } from "react-icons/ai"
 

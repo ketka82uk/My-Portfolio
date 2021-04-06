@@ -34,13 +34,17 @@
 
   h2.h2-about {
     font-size: 50px;
+    margin-bottom: 0px;
   }
 
   p.p-about {
     font-size: 16px;
     background-color: rgba(255, 255, 255, 0.4);
     padding: 10px;
-    color: #3a3a3a
+    padding-right: 20px;
+    color: #3a3a3a;
+    margin-top: 20px;
+    margin-bottom: 20px
   }
 
   .about-right-section {
@@ -51,6 +55,7 @@
   .about-container {
     padding-right: 0px;
   }
+
 
   // * PORTFOLIO
 
@@ -109,9 +114,12 @@
   }
 
   .sml-channel-button {
-    background-color: $dark-cornflower-blue !important;
+    background: none !important;
+    border: 3px solid $dark-cornflower-blue !important;
     font-family: 'Raleway', sans-serif;
-    font-size: 14px !important;
+    font-size: 13px !important;
+    border-radius: 0px !important;
+    color: $dark-cornflower-blue !important;
   }
 
   .description-contents {
@@ -131,7 +139,21 @@
   }
 
   a.a-contact {
-    font-size: 22px;
+    font-size: 20px;
+  }
+
+  .contact-background {
+    background-image: url('../images/contact-background-sml.jpg');
+  }
+
+  input.contact {
+    font-size: 20px !important;
+    border-bottom: 2px solid $indian-red !important;
+  }
+
+  textarea.contact {
+    font-size: 20px !important;
+    border-bottom: 2px solid $indian-red !important;
   }
 
 

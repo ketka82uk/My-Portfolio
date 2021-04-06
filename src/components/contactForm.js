@@ -49,7 +49,8 @@ export default function ContactUs() {
         <Form.Label htmlFor="firstName" srOnly>
           First name
         </Form.Label>
-        <Form.Control 
+        <Form.Control
+        className="contact" 
         placeholder="First name"
         type="text"
         name="first_name" 
@@ -60,7 +61,8 @@ export default function ContactUs() {
         <Form.Label htmlFor="lastName" srOnly>
           Last name
         </Form.Label>
-        <Form.Control 
+        <Form.Control
+        className="contact"  
         placeholder="Last name"
         type="text"
         name="last_name" 
@@ -71,7 +73,8 @@ export default function ContactUs() {
         <Form.Label htmlFor="company" srOnly>
           Company
         </Form.Label>
-        <Form.Control 
+        <Form.Control
+        className="contact"  
         placeholder="Company"
         type="text" 
         name="company" 
@@ -83,7 +86,8 @@ export default function ContactUs() {
         <Form.Label htmlFor="email" srOnly>
           Email
         </Form.Label>
-        <Form.Control 
+        <Form.Control
+        className="contact"  
         placeholder="Email address"
         type="text" 
         name="user_email" 
@@ -95,10 +99,11 @@ export default function ContactUs() {
         <Form.Label htmlFor="message" srOnly>
           Message
         </Form.Label>
-        <Form.Control 
+        <Form.Control
+        className="contact"  
         placeholder="Your message"
         as="textarea"
-        rows={5} 
+        rows={4} 
         name="message" 
         value={message}
         onChange={(e) => handleChange(e)}

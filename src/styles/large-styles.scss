@@ -1,8 +1,94 @@
 @media (min-width: 992px) and (max-width: 1199.98px) { 
+  
+  // ! BUTTONS
+
+  $height: 40;
+
+  // * WELCOME
+  
   h1.cathy {
-    font-size: 120px;
+    font-size: 130px;
   }
   h2.h2-welcome {
-    font-size: 90px;
+    font-size: 100px;
   }
+
+  // * ABOUT
+
+  h2.h2-about {
+    font-size: 70px;
+    margin-bottom: 0px;
+  }
+
+  p.p-about {
+    font-size: 18px;
+    padding-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px
+  }
+
+  // * PORTFOLIO
+
+  .portfolio-upper-section {
+    margin-top: 50px;
+  }
+
+  h2.h2-portfolio {
+    font-size: 100px;
+  }
+
+  .outer-tv-container {
+    height: 400px;
+    width: 100%;
+  }
+
+  .inner-tv-container {
+    height: 280px;
+    width: 380px;
+    margin-right: 80px;
+    margin-top: 10px;
+  }
+
+  .project-one {
+    height: 280px;
+    width: 380px;
+    margin-right: 80px;
+    margin-top: 10px;
+  }
+
+  img.img-tv {
+    height: 320px;
+  }
+
+  .tv-section {
+    margin-top: 50px;
+  }
+
+  .project-links {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .button-container {
+    width: 125px;
+    padding-right: 10px;
+  }
+
+  .channel-button {
+    font-size: 1em;
+    height:$height+px;
+    line-height:$height+px;
+  }
+
+  .channel-button:before {
+    height:($height)+px;
+  }
+
+
+
+
+
+
+
+
 }
