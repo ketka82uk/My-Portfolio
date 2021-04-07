@@ -22,7 +22,7 @@ export default function Contact() {
           <h2 className="h2-contact">{"{ let's talk }"}</h2>
           <a className="a-contact" href="https://www.linkedin.com/in/cathyjthomas/" target="_blank" rel="noreferrer">/in/cathyjthomas <SiLinkedin /></a>
           <a className="a-contact" href="https://github.com/ketka82uk" target="_blank" rel="noreferrer">/ketka82uk <SiGithub /></a>
-          <a className="a-contact" href="mailto:cathyjthomas.dev@gmail.com">cathyjthomas.dev@gmail.com <AiOutlineMail /></a>
+          <a className="a-contact" href="mailto:cathyjthomas.dev@gmail.com" rel="noreferrer">cathyjthomas.dev@gmail.com <AiOutlineMail /></a>
           </div>
         </Col>
         <Col md={12} lg={6}>

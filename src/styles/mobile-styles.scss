@@ -38,13 +38,13 @@
   }
 
   p.p-about {
-    font-size: 16px;
+    font-size: 14px;
     background-color: rgba(255, 255, 255, 0.4);
     padding: 10px;
     padding-right: 20px;
     color: #3a3a3a;
-    margin-top: 20px;
-    margin-bottom: 20px
+    margin-top: 10px;
+    margin-bottom: 10px
   }
 
   .about-right-section {
@@ -68,8 +68,21 @@
   }
 
   h2.h2-portfolio {
-    font-size: 60px;
+    font-size: 50px;
     color: whitesmoke;
+    margin-top: 20px;
+  }
+
+  h3.h3-portfolio {
+    font-size: 30px;
+  }
+
+  p.p-portfolio {
+    font-size: 16px;
+  }
+
+  a.project-links {
+    font-size: 16px;
   }
 
   .outer-tv-container {
@@ -80,14 +93,17 @@
   .inner-tv-container {
     height: 200px;
     width: 300px;
-    margin-right: 20px;
+    margin-top: 5px;
+    margin-right: 50px;
+    margin-left: 40px;
   }
 
   .project-one {
-    height: 180px;
+    height: 200px;
     width: 300px;
-    margin-right: 20px;
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-right: 50px;
+    margin-left: 40px;
   }
 
   img.img-tv {
@@ -110,7 +126,6 @@
     display: flex;
     margin-top: 30px;
     justify-content: space-between;
-
   }
 
   .sml-channel-button {
@@ -135,11 +150,15 @@
   // * CONTACT
 
   h2.h2-contact {
-    font-size: 60px;
+    font-size: 50px;
   }
 
   a.a-contact {
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  .contact-upper-section {
+    margin-top: 50px;
   }
 
   .contact-background {
@@ -147,13 +166,22 @@
   }
 
   input.contact {
-    font-size: 20px !important;
+    font-size: 18px !important;
     border-bottom: 2px solid $indian-red !important;
+    margin: 5px !important;
   }
 
   textarea.contact {
-    font-size: 20px !important;
+    font-size: 18px !important;
     border-bottom: 2px solid $indian-red !important;
+  }
+
+  .contact-lower-section {
+    font-size: 10px;
+  }
+
+  #submit-button {
+    font-size: 18px !important;
   }
 
 

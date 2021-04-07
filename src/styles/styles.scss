@@ -386,21 +386,23 @@ button.about-button {
   height: 400px;
   width: 620px;
   background-image: url('https://i.imgur.com/jwhS7om.gif');
-  position: absolute;
+  position: relative;
   z-index: -1;
   margin-top: 1%;
-  margin-left: 30px;
+  margin-left: 40px;
 }
 
 .project-one {
-  height: 400px;
-  width: 620px;
-  position: absolute;
+  position: relative;
+  height: 80%;
+  width: 70%;
   z-index: -1;
-  margin-top: 1%;
-  margin-left: 30px;
-  margin-right: 50px;
-  background-size: contain;
+  margin-top: 30px;
+  margin-left: 40px;
+  margin-right: 150px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: block;
 }
 
 .tv {
