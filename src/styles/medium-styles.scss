@@ -38,9 +38,9 @@
   }
 
   p.p-about {
-    font-size: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    font-size: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 
   .about-right-section {
@@ -51,6 +51,20 @@
   .about-container {
     padding-right: 0px;
   }
+
+  p.p-skills {
+    font-size: 11px;
+  }
+  
+  p.p-icon {
+    font-size: 26px;
+  }
+  
+  .skills-cell {
+    height: 80px;
+    width: 80px;
+  }
+
 
 
   // * PORTFOLIO

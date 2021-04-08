@@ -9,6 +9,7 @@ import '../styles/styles.scss'
 import '../styles/mobile-styles.scss'
 import '../styles/medium-styles.scss'
 import '../styles/large-styles.scss'
+import '../styles/max-height-styles.scss'
 
 import { Navbar, Nav } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';

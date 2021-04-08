@@ -189,6 +189,11 @@ h2.h2-welcome {
   font-size: 100px;
 }
 
+h3.h3-welcome {
+  margin-top: 40px;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.8) !important;
+}
+
 .welcome-header {
   display: flex;
   flex-direction: column;
@@ -287,6 +292,32 @@ button.about-button {
   color: whitesmoke;
   border: solid 3px whitesmoke !important;
   background: none !important;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+p.p-skills {
+  font-size: 11px;
+  text-align: center;
+}
+
+p.p-icon {
+  font-size: 35px;
+}
+
+.skills-cell {
+  height: 90px;
+  width: 90px;
+  margin: 3px;
+  // border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
 }
 
 
@@ -394,12 +425,11 @@ button.about-button {
 
 .project-one {
   position: relative;
-  height: 80%;
-  width: 70%;
+  height: 400px;
+  width: 620px;
   z-index: -1;
   margin-top: 30px;
   margin-left: 40px;
-  margin-right: 150px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   display: block;

@@ -29,22 +29,23 @@
   }
 
   img.me {
-    height: 200px;
+    height: 180px;
   }
 
   h2.h2-about {
-    font-size: 50px;
+    font-size: 40px;
     margin-bottom: 0px;
   }
 
   p.p-about {
-    font-size: 14px;
-    background-color: rgba(255, 255, 255, 0.4);
-    padding: 10px;
+    font-size: 12px;
+    padding: 5px;
     padding-right: 20px;
-    color: #3a3a3a;
-    margin-top: 10px;
-    margin-bottom: 10px
+    color: #3a3a3a; 
+  }
+
+  .about-description {
+    background-color: rgba(255, 255, 255, 0.4);
   }
 
   .about-right-section {
@@ -54,6 +55,33 @@
 
   .about-container {
     padding-right: 0px;
+  }
+
+  button.about-button {
+    height: 40px;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 10px;
+    border: 2px solid $pacific-blue !important;
+    border-radius: 0px !important;
+    background: none;
+    color: $pacific-blue;
+    font-size: 16px;
+  }
+
+  p.p-skills {
+    font-size: 10px;
+    color: white;
+  }
+  
+  p.p-icon {
+    font-size: 24px;
+    color: white;
+    display: none;
+  }
+  
+  .skills-cell {
+    height: 35px;
+    width: 70px;
   }
 
 
@@ -95,7 +123,7 @@
     width: 300px;
     margin-top: 5px;
     margin-right: 50px;
-    margin-left: 40px;
+    margin-left: 50px;
   }
 
   .project-one {
@@ -103,7 +131,7 @@
     width: 300px;
     margin-top: 5px;
     margin-right: 50px;
-    margin-left: 40px;
+    margin-left: 50px;
   }
 
   img.img-tv {
