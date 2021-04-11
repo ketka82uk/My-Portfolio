@@ -67,9 +67,9 @@ export default function AboutMe({ toggleAboutMe, toggleInterests }) {
     skill.category === 'front-end' ?
     skill.color = `rgba(225,85,84,1)` :
     skill.category === 'back-end' ?
-    skill.color = `rgba(80,178,192,1)` :
+    skill.color = `rgba(132,208,196,1)` :
     skill.category === 'design' ?
-    skill.color = `rgba(247,184,1,1)` :
+    skill.color = `rgba(100,55,84,1)` :
     skill.color = `rgba(255,255,255,.2)`
 
   return <div className="skills-cell" style={{ backgroundColor: `${skill.color}`}}>

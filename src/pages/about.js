@@ -36,17 +36,18 @@ export default function About() {
     setAboutMe(false)
     setSkills(false)
     setInterests(true)
-    console.log(interests)
   }
 
   return (<div className="about-background">
     <Container fluid>
       <Row>
-        <Col sm={0} md={0} lg={1}></Col>
-        <Col sm={0} md={4} lg={4}>
-          <img className="me" src={me} alt="me" height='400px' />
+        <Col md={0} lg={1}></Col>
+        <Col md={0} lg={4}>
+          <div className="about-left-section">
+          <img className="me" src={me} alt="me" height='500px' />  
+          </div>
         </Col>
-        <Col sm={12} md={7} lg={6}>
+        <Col md={12} lg={5}>
           <div className="about-right-section">
             {aboutMe && <AboutMe
               toggleSkills={toggleSkills}
@@ -59,7 +60,7 @@ export default function About() {
               toggleSkills={toggleSkills} />}
           </div>
         </Col>
-        <Col sm={0} md={1} lg={1}></Col>
+        <Col md={0} lg={1}></Col>
       </Row>
     </Container>
   </div>

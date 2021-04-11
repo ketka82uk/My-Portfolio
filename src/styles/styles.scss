@@ -3,11 +3,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Cardo&family=Crimson+Text&family=Libre+Baskerville&family=Merriweather&family=Neuton&family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
 
 //1200 - break
 //990 - break
 //770 - break
 //#7fbb98
+
+
+// * Original
+//$selective-yellow: #f7b801ff;
+//$indian-red: #e15554ff;
+//$pacific-blue: #50b2c0ff;
+//$dark-cornflower-blue: #2c497fff;
+
+
+// * Retro 1
+// $selective-yellow: #FEC240;
+// $indian-red: #DE4B43;
+// $pacific-blue: #98C4D1;
+// $dark-cornflower-blue: #2F375B;
+
+// * Retro 2
+// $selective-yellow: #FEC820;
+// $indian-red: #F63B34;
+// $pacific-blue: #84D0C4;
+// $dark-cornflower-blue: #492B2D;
+
+// * Retro 3
+// $selective-yellow: #F5E258;
+// $indian-red: #E95D2A;
+// $pacific-blue: #D6F1C4;
+// $dark-cornflower-blue: #643754;
 
 //lg-1080
 //md-892
@@ -18,6 +46,10 @@
 // lg >992
 // xl >1200
 // xxl >1400
+
+// ! FONTS
+
+$main-font: 'Crimson Text', Georgia, serif;
 
 // ! BREAKPOINTS
 
@@ -37,6 +69,11 @@ $size: 50px;
 $speed: 3s;
 $peakopacity:0.7;
 
+.react-rotating-text-cursor {
+  animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+}
+ 
+
 // ! BUTTONS
 
 $height:65;
@@ -49,16 +86,16 @@ $timing-function: ease-out;
 
 // ! COLOURS
 
-$selective-yellow: #f7b801ff;
-$indian-red: #e15554ff;
-$pacific-blue: #50b2c0ff;
-$dark-cornflower-blue: #2c497fff;
+$plum: #643754;
+$indian-red: #e15554;
+$pacific-blue: #84D0C4;
+$dark-cornflower-blue: #2F375B;
 
 // ! GENERAL TAGS
 
 
 body {
-  font-family: 'Crimson Text', serif !important;
+  font-family: $main-font !important;
   font-size: 24px !important;
 
 p {
@@ -68,13 +105,13 @@ p {
 }
   
 h1 {
-  font-family: 'Crimson Text', Georgia, serif;
+  font-family: $main-font;
   font-size: 150px;
   text-shadow: 5px 5px 8px rgba(0,0,0,0.8) !important;
 }
 
 h2 {
-  font-family: 'Crimson Text', Georgia, serif;
+  font-family: $main-font;
   font-size: 100px ;
   text-shadow: 2.5px 2.5px 4px rgba(0,0,0,0.8) !important;
 }
@@ -85,9 +122,7 @@ h3 {
   font-size: 40px;
 } 
 
-span {
-  background-color: white !important;
-}
+
 
 a {
   color: whitesmoke !important;
@@ -102,13 +137,13 @@ input {
   border-top: none !important;
   border-right: none !important;
   border-left: none !important;
-  border-bottom: 3px solid $indian-red !important;
+  border-bottom: 3px solid $dark-cornflower-blue !important;
   border-radius: 0px !important;
   background: none !important;
   margin: 10px;
   font-family: 'Raleway', sans-serif;
   font-size: 24px !important;
-  color: #3a3a3a !important;
+  color: whitesmoke !important;
 }
 
 input:focus {
@@ -124,7 +159,7 @@ textarea {
   border-top: none !important;
   border-right: none !important;
   border-left: none !important;
-  border-bottom: 5px solid $indian-red !important;
+  border-bottom: 3px solid $dark-cornflower-blue !important;
   border-radius: 0px !important;
   background: rgba(250, 250, 250, 0.5) !important;
   margin: 10px;
@@ -133,7 +168,7 @@ textarea {
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: $indian-red !important;
+  color: $dark-cornflower-blue !important;
   opacity: 0.5 !important; /* Firefox */
 }
 
@@ -177,7 +212,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url('../images/home-background.jpg');
+  background-image: url('../images/home-background-2.jpg');
   background-size: 100% 100%
 }
 
@@ -187,11 +222,13 @@ h1.welcome {
 
 h2.h2-welcome {
   font-size: 100px;
+  color: $pacific-blue; 
 }
 
+
 h3.h3-welcome {
-  margin-top: 40px;
   text-shadow: 2px 2px 3px rgba(0,0,0,0.8) !important;
+  color: $indian-red;
 }
 
 .welcome-header {
@@ -202,9 +239,19 @@ h3.h3-welcome {
   color: whitesmoke;
 }
 
+.rotating-text {
+  height: 50px;
+}
+
 .cathy {
+  color: whitesmoke;
+  line-height: .8em;
+  margin-bottom: 10px;
+}
+
+.j {
   color: $indian-red;
-  line-height: .7em;
+  font-size: 200px;
 }
 
 .arrows {
@@ -244,22 +291,22 @@ h3.h3-welcome {
 .about-background {
   height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  background-image: url('../images/about-background.jpg');
-  background-size: 100% 100%
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: $dark-cornflower-blue
 }
 
 .about-right-section {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-left-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
-  margin-top: 50px;
-}
-
-.about-container {
-  padding-right: 80px;
+  align-items: flex-end;
 }
 
 h2.h2-about {
@@ -328,8 +375,7 @@ p.p-icon {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url('../images/portfolio-background.jpg');
-  background-size: 100% 100%
+  background-color: $pacific-blue;
 }
 
 .portfolio-upper-section {
@@ -356,7 +402,7 @@ p.p-icon {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  color: $dark-cornflower-blue;
+  color: $indian-red;
 }
 
 .curly-brace {
@@ -364,7 +410,7 @@ p.p-icon {
   align-items: flex-start;
   font-size: 250px;
   line-height: .9em;
-  color: $dark-cornflower-blue;
+  color: $indian-red;
   text-shadow: 5px 5px 8px rgba(0,0,0,0.8) !important;
   font-family: 'Kiwi Maru', Georgia, serif;
 }
@@ -390,11 +436,15 @@ p.p-icon {
 }
 
 .project-links {
-  color: $dark-cornflower-blue !important;
+  color: $indian-red !important;
 }
 
-.h3-portfolio {
-  color: $dark-cornflower-blue
+h2.h2-portfolio {
+  font-size: 80px;
+}
+
+h3.h3-portfolio {
+  color: $indian-red
 }
 
 .tv-section {
@@ -539,8 +589,7 @@ p.p-icon {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url('../images/contact-background.jpg');
-  background-size: 100% 100%
+  background-color: $indian-red
 }
 
 #submit-button {
@@ -548,7 +597,7 @@ p.p-icon {
   font-family: 'Raleway', sans-serif;
   margin: 10px;
   border-radius: 0px !important;
-  background-color: $indian-red !important;
+  background-color: $dark-cornflower-blue !important;
 }
 
 .contact-upper-section {
@@ -564,7 +613,8 @@ p.p-icon {
   justify-content: center;
   font-size: 14px;
   font-family: 'Raleway', sans-serif;
-  color: gray;
+  background-color: $dark-cornflower-blue;
+  color: $pacific-blue;
 }
 
 .contact-left-section {
@@ -574,14 +624,19 @@ p.p-icon {
 }
 
 h2.h2-contact {
-  color: $indian-red;
+  color: $dark-cornflower-blue;
   margin-bottom: 20px;
 }
 
 a.a-contact {
-  color: #3a3a3a !important;
+  color: whitesmoke !important;
   font-size: 24px;
   font-family: 'Raleway', sans-serif
+}
+
+.telephone {
+  display: flex;
+  justify-content: flex-end;
 }
 
 
@@ -608,5 +663,17 @@ a.a-contact {
       border-left:$size/3 solid rgba(255,255,255,0);
       border-bottom:$size/3 solid rgba(255,255,255,0);
       transform:translate($size/-6,$size*4/6)rotate(-45deg) ;
+  }
+}
+
+@keyframes blinking-cursor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

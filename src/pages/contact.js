@@ -11,6 +11,7 @@ import ContactUs from "../components/contactForm"
 // * Images
 import { SiGatsby, SiBootstrap, SiLinkedin, SiGithub } from "react-icons/si"
 import { AiOutlineMail } from "react-icons/ai"
+import telephone from "../images/telephone.png"
 
 export default function Contact() {
   return (
@@ -23,6 +24,9 @@ export default function Contact() {
           <a className="a-contact" href="https://www.linkedin.com/in/cathyjthomas/" target="_blank" rel="noreferrer">/in/cathyjthomas <SiLinkedin /></a>
           <a className="a-contact" href="https://github.com/ketka82uk" target="_blank" rel="noreferrer">/ketka82uk <SiGithub /></a>
           <a className="a-contact" href="mailto:cathyjthomas.dev@gmail.com" rel="noreferrer">cathyjthomas.dev@gmail.com <AiOutlineMail /></a>
+          </div>
+          <div className="telephone">
+            <img src={telephone} alt="retro telephone" height="300px" />
           </div>
         </Col>
         <Col md={12} lg={6}>

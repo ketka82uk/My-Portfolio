@@ -24,9 +24,6 @@
 
   // * ABOUT
 
-  .about-background {
-    background-image: url('../images/about-background-sml.jpg')
-  }
 
   img.me {
     height: 300px;
@@ -46,6 +43,7 @@
   .about-right-section {
     margin-top: 0px;
     justify-content: center;
+    padding: 20px;
   }
 
   .about-container {
@@ -68,10 +66,6 @@
 
 
   // * PORTFOLIO
-
-  .portfolio-background {
-    background-image: url('../images/portfolio-background-sml.jpg')
-  }
 
   .portfolio-upper-section {
     margin-top: 50px;
@@ -158,18 +152,18 @@
     font-size: 20px;
   }
 
-  .contact-background {
-    background-image: url('../images/contact-background-sml.jpg');
-  }
-
   input.contact {
     font-size: 20px !important;
-    border-bottom: 2px solid $indian-red !important;
+    border-bottom: 2px solid $dark-cornflower-blue !important;
   }
 
   textarea.contact {
     font-size: 20px !important;
-    border-bottom: 2px solid $indian-red !important;
+    border-bottom: 2px solid $dark-cornflower-blue !important;
+  }
+
+  .telephone {
+    display: none;
   }
 
 
