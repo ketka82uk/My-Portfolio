@@ -1,51 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cardo&family=Crimson+Text&family=Libre+Baskerville&family=Merriweather&family=Neuton&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo&family=Crimson+Text&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cutive&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
-
-//1200 - break
-//990 - break
-//770 - break
-//#7fbb98
-
-
-// * Original
-//$selective-yellow: #f7b801ff;
-//$indian-red: #e15554ff;
-//$pacific-blue: #50b2c0ff;
-//$dark-cornflower-blue: #2c497fff;
-
-
-// * Retro 1
-// $selective-yellow: #FEC240;
-// $indian-red: #DE4B43;
-// $pacific-blue: #98C4D1;
-// $dark-cornflower-blue: #2F375B;
-
-// * Retro 2
-// $selective-yellow: #FEC820;
-// $indian-red: #F63B34;
-// $pacific-blue: #84D0C4;
-// $dark-cornflower-blue: #492B2D;
-
-// * Retro 3
-// $selective-yellow: #F5E258;
-// $indian-red: #E95D2A;
-// $pacific-blue: #D6F1C4;
-// $dark-cornflower-blue: #643754;
-
-//lg-1080
-//md-892
-
-// <576
-// sm >576
-// md  >768
-// lg >992
-// xl >1200
-// xxl >1400
 
 // ! FONTS
 
@@ -126,6 +81,7 @@ h3 {
 
 a {
   color: whitesmoke !important;
+  font-family: 'Raleway', sans-serif;
 }
 
 a:hover {
@@ -195,10 +151,6 @@ button {
 
 // ! NAVBAR
 
-// .navbar-toggler-icon {
-//   background-image: url("https://i.imgur.com/Vg3OFQ3.png") !important;
-//   background-color: rgba(0,0,0,0) !important;
-// }
 
 .navbar-link {
   text-shadow: 2px 2px 3px rgba(0,0,0,0.8) !important;

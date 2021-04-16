@@ -17,11 +17,12 @@ SiFlask,
 SiMicrosoftexcel,
 SiWordpress,
 SiAdobephotoshop,
-SiAdobecreativecloud,
+SiAdobeillustrator,
 SiSketch,
 SiMicrosoftsharepoint
  } from "react-icons/si"
  import { FaProjectDiagram, FaChalkboardTeacher, FaLanguage } from "react-icons/fa"
+ import { RiMoneyPoundCircleLine } from "react-icons/ri"
  import { GiTeacher } from "react-icons/gi"
 
 
@@ -45,14 +46,15 @@ export default function AboutMe({ toggleAboutMe, toggleInterests }) {
   {logo: '', name: 'DESIGN SKILLS =>', category: 'design', color: '', opacity: 0, competency: 'good'},
   {logo: <SiSketch/>, name: 'Sketch', category: 'design', color: '', opacity: 0, competency: 'good' },
   {logo: <SiAdobephotoshop/>, name: 'Photoshop', category: 'design', color: '', opacity: 0, competency: 'good' },
-  {logo: <SiAdobecreativecloud/>, name: 'Creative Cloud', category: 'design', opacity: 0, color: '', competency: 'good' },
+  {logo: <SiAdobeillustrator/>, name: 'Illustrator', category: 'design', opacity: 0, color: '', competency: 'good' },
   {logo: '', name: 'OTHER SKILLS =>', category: 'other', color: '', opacity: 0, competency: 'good'},
   {logo: <SiMicrosoftexcel/>, name: 'Excel', category: 'other', color: '', opacity: 0, competency: 'good' },
   {logo: <SiWordpress/>, name: 'Wordpress', category: 'other', color: '', opacity: 0, competency: 'good' },
   {logo: <SiMicrosoftsharepoint/>, name: 'Sharepoint', category: 'other', color: '', opacity: 0, competency: 'good' },
-  {logo: <FaProjectDiagram/>, name: 'Project Management', category: 'other', color: '', opacity: 0, competency: 'good' },
+  {logo: <FaProjectDiagram/>, name: 'Project management', category: 'other', color: '', opacity: 0, competency: 'good' },
   {logo: <FaChalkboardTeacher/>, name: 'Pitching & presenting', category: 'other', color: '', opacity: 0, competency: 'good' },
   {logo: <GiTeacher/>, name: 'Training delivery', category: 'other', color: '', opacity: 0, competency: 'good' },
+  {logo: <RiMoneyPoundCircleLine/>, name: 'Budget management', category: 'other', color: '', opacity: 0, competency: 'good' },
   {logo: <FaLanguage/>, name: 'Russian (fluent)', category: 'other', color: '', opacity: 0 ,competency: 'good' }
   ]
 

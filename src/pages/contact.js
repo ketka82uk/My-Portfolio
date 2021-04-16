@@ -37,7 +37,7 @@ export default function Contact() {
 
        <div className="contact-lower-section">
        <div>Cathy J Thomas | 2021</div>
-       <div>Made with <SiGatsby /> Gatsby and <SiBootstrap /> Bootstrap</div>
+       <div>Built from the ground up with <SiGatsby /> Gatsby, <SiBootstrap /> Bootstrap and Fullpage.js</div>
        <div>Assets from <a href="https://www.rawpixel.com/" target="_blank" rel="noreferrer">rawpixel</a></div>
        </div>
        
