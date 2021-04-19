@@ -3,6 +3,7 @@ import emailjs from 'emailjs-com';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
+
 export default function ContactUs() {
 
   const [sendStatus, setSendStatus] = useState(false)
@@ -28,7 +29,7 @@ export default function ContactUs() {
 
   function sendEmail(e) {
     e.preventDefault();
-
+  
     emailjs.sendForm('contact_service', 'contact_form', e.target, 'user_sS1sEZGCrVRU1Lir7w3O5')
       .then((result) => {
           console.log(result.text);

@@ -6,7 +6,7 @@ import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
 
 // * Components
-import ContactUs from "../components/contactForm"
+import SignupForm from "../components/formikContact"
 
 // * Images
 import { SiGatsby, SiBootstrap, SiLinkedin, SiGithub } from "react-icons/si"
@@ -30,7 +30,7 @@ export default function Contact() {
           </div>
         </Col>
         <Col md={12} lg={6}>
-        <ContactUs />
+        <SignupForm />
         </Col>
     </Row>
        </Container>
