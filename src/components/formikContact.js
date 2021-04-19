@@ -4,10 +4,20 @@ import emailjs from 'emailjs-com'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
-export default function SignupForm() {
+const validate = values => {
+  const errors = {}
+  if (!values.firstName) {
+    errors.firstName = 'Required'
+  }
+  if (!values.email) {
+    errors.email = 'Required'
+  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+    errors.email = 'Invalid email address'
+  }
+  return errors
+}
 
-  // Pass the useFormik() hook initial form values and a submit function that will
-  // be called when the form is submitted
+export default function SignupForm() {
 
   function sendEmail(e) {
     e.preventDefault();
@@ -22,12 +32,15 @@ export default function SignupForm() {
       company: '',
       message: '',
     },
-    onSubmit: values => {
-      alert(JSON.stringify(values, null, 2));
-    },
+    validate,
+    onSubmit: e => {
+      e.preventDefault();
+      emailjs.sendForm('contact_service', 'contact_form', e.target, 'user_sS1sEZGCrVRU1Lir7w3O5')
+    }
   });
+
   return (
-    <Form onSubmit={formik.handleSubmit, sendEmail}>
+    <Form onSubmit={formik.handleSubmit}>
       <Form.Row>
         <Form.Label htmlFor="firstName" srOnly>
           First Name
@@ -41,6 +54,7 @@ export default function SignupForm() {
           onChange={formik.handleChange}
           value={formik.values.firstName}
         />
+        {formik.errors.firstName ? <div>{formik.errors.firstName}</div> : null}
       </Form.Row>
       <Form.Row>
         <Form.Label htmlFor="lastName" srOnly>
@@ -69,6 +83,7 @@ export default function SignupForm() {
           onChange={formik.handleChange}
           value={formik.values.user_email}
         />
+        {formik.errors.email ? <div>{formik.errors.email}</div> : null}
       </Form.Row>
       <Form.Row>
         <Form.Label htmlFor="company" srOnly>
@@ -104,3 +119,4 @@ export default function SignupForm() {
     </Form>
   );
 };
+

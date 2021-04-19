@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import { RiEyeCloseFill } from 'react-icons/ri';
 
 
 export default function ContactUs() {
@@ -12,6 +13,7 @@ export default function ContactUs() {
   const [company, setCompany] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+  const [validationError, setValidationError] = useState(false)
 
   const handleChange = (event) => {
     event.target.name === "first_name" 
@@ -28,12 +30,15 @@ export default function ContactUs() {
   };
 
   function sendEmail(e) {
-    e.preventDefault();
-  
+    e.preventDefault()
+
+    if(!firstName || !email) {
+      setValidationError(true)
+    } else {
     emailjs.sendForm('contact_service', 'contact_form', e.target, 'user_sS1sEZGCrVRU1Lir7w3O5')
       .then((result) => {
-          console.log(result.text);
           setSendStatus(!sendStatus)
+          setValidationError(false)
           setFirstName('')
           setLastName('')
           setCompany('')
@@ -42,6 +47,7 @@ export default function ContactUs() {
       }, (error) => {
           console.log(error.text);
       });
+    }
   }
 
   return (<div>
@@ -52,7 +58,7 @@ export default function ContactUs() {
         </Form.Label>
         <Form.Control
         className="contact" 
-        placeholder="First name"
+        placeholder="First name*"
         type="text"
         name="first_name" 
         value={firstName}
@@ -89,7 +95,7 @@ export default function ContactUs() {
         </Form.Label>
         <Form.Control
         className="contact"  
-        placeholder="Email address"
+        placeholder="Email address*"
         type="text" 
         name="user_email" 
         value={email}
@@ -116,7 +122,7 @@ export default function ContactUs() {
       </Button>
       </Form.Row>
     </Form>
-  
+    {validationError && <p>Please complete all fields marked with *</p>}
     {sendStatus && <p>Form submitted - thanks for getting in touch!</p>}
     </div>
   );
